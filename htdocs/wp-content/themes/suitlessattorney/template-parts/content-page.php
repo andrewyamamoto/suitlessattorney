@@ -24,7 +24,9 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
-
+	<?php if ( get_field('suitlessattorney_aside') ) {
+	    the_field('suitlessattorney_aside');
+	} ?>
 	<footer class="entry-footer">
 		<?php
 			edit_post_link(

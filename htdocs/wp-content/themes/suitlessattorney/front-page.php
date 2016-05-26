@@ -9,7 +9,17 @@
 
 get_header(); ?>
 
-blah blah blah
-
 <?php
+	if ( have_posts() ) :
+		while ( have_posts() ) : the_post();
+			get_template_part( 'template-parts/content', 'home' );
+		endwhile;
+	endif;
+
+?>
+<?php if ( get_field('suitlessattorney_aside') ) {
+    the_field('suitlessattorney_aside');
+} ?>
+<?php
+
 get_footer();
