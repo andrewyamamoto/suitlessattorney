@@ -142,7 +142,34 @@ function woocommerce_result_count() {
 // add_filter( 'woocommerce_cart_item_thumbnail', '__return_empty_string' );
 // remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 
+add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
 
+/**
+ * custom_woocommerce_template_loop_add_to_cart
+*/
+function custom_woocommerce_product_add_to_cart_text() {
+	global $product;
+
+	$product_type = $product->product_type;
+
+	switch ( $product_type ) {
+		case 'external':
+			return __( 'Buy product', 'woocommerce' );
+		break;
+		case 'grouped':
+			return __( 'View products', 'woocommerce' );
+		break;
+		case 'simple':
+			return __( 'Purchase', 'woocommerce' );
+		break;
+		case 'variable':
+			return __( 'Select options', 'woocommerce' );
+		break;
+		default:
+			return __( 'Read more', 'woocommerce' );
+	}
+
+}
 
 /**
  * Implement the Custom Header feature.

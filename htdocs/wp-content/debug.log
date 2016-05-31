@@ -19,3 +19,6 @@
 [26-May-2016 02:43:20 UTC] PHP Fatal error:  Call to a member function format() on a non-object in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/movies-page.php on line 47
 [26-May-2016 02:43:50 UTC] PHP Warning:  DateTime::createFromFormat() expects at least 2 parameters, 1 given in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/movies-page.php on line 46
 [26-May-2016 02:43:50 UTC] PHP Fatal error:  Call to a member function format() on a non-object in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/movies-page.php on line 47
+[28-May-2016 05:02:53 UTC] PHP Notice:  Undefined variable: current in /srv/www/suitlessattorney/htdocs/wp-content/plugins/custom-post-type-ui/inc/post-types.php on line 192
+[28-May-2016 05:13:20 UTC] PHP Notice:  Undefined variable: current in /srv/www/suitlessattorney/htdocs/wp-content/plugins/custom-post-type-ui/inc/post-types.php on line 192
+[29-May-2016 05:09:41 UTC] PHP Notice:  Undefined variable: current in /srv/www/suitlessattorney/htdocs/wp-content/plugins/custom-post-type-ui/inc/post-types.php on line 192
