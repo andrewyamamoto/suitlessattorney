@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-
 <?php
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post();
@@ -17,9 +16,7 @@ get_header(); ?>
 	endif;
 
 ?>
-<?php if ( get_field('suitlessattorney_aside') ) {
-    the_field('suitlessattorney_aside');
-} ?>
+
 <?php
 
 get_footer();

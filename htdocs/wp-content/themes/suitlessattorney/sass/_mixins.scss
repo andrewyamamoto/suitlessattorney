@@ -1,0 +1,54 @@
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin flex{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+}
+
+@mixin img-cover{
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+@mixin border-radius($num){
+    -webkit-border-radius: $num;
+       -moz-border-radius: $num;
+         -o-border-radius: $num;
+            border-radius: $num;
+}
+@mixin vert-align(){
+               position: absolute;
+             margin-top: -50px;
+                 height: 100px;
+                    top: 50%;
+}
+@mixin vert-align-inline($h){
+        justify-content: center;
+         flex-direction: column;
+                display: flex;
+                 height: $h;
+}
+@mixin font-size($sizeValue: 16, $line: $sizeValue * 1.5) {
+    font-size: ($sizeValue) + px;
+    line-height: ($line) + px;
+}
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@mixin opacity($val){
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=$val)";
+    filter: alpha(opacity=$val);
+    opacity:$val;
+}

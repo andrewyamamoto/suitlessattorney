@@ -27,3 +27,21 @@ function suitlessattorney_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'suitlessattorney_body_classes' );
+
+function suit_feat_img() {
+
+	if ( is_home() && false == is_page( 'contact-us' ) && false == is_tax( 'property-location' ) ) {
+
+		global $post;
+
+		$id = get_post_thumbnail_id( $post->ID );
+
+		$img_url    = wp_get_attachment_url( $id );
+		$attr       = sprintf( 'style="background-image: url(%s)"', $img_url );
+		$feat_image = empty( $img_url ) ? '' : $attr;
+
+		printf( '<section class="pagebanner" %s></section>', $feat_image );
+
+	}
+
+}

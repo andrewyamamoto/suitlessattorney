@@ -13,10 +13,12 @@
 
 	</div><!-- #content -->
 
-	
+
 </div><!-- #page -->
 
 	<?php wp_footer(); ?>
-
+<script type="text/javascript">
+	try{Typekit.load({ async: true });}catch(e){}
+</script>
 </body>
 </html>

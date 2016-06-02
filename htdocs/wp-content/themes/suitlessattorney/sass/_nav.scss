@@ -1,0 +1,18 @@
+.navbar{
+    background:none;
+    border:none;
+    .navbar-brand{
+        padding:40px 15px;
+    }
+    .nav{
+        > li{
+            a{
+                color:$white;
+                padding:40px 15px;
+                &:hover{
+                    color:$white;
+                }
+            }
+        }
+    }
+}
