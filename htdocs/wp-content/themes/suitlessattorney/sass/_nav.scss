@@ -1,18 +1,71 @@
-.navbar{
-    background:none;
-    border:none;
-    .navbar-brand{
-        padding:40px 15px;
-    }
-    .nav{
-        > li{
-            a{
-                color:$white;
-                padding:40px 15px;
-                &:hover{
-                    color:$white;
+#navigation{
+    transition: background-color, .2s;
+    &.sticky{
+        background-color: rgba($white, .9);
+        .nav{
+            > li{
+                a{
+                    color:$blue;
+                    &:focus,
+                    &:hover{
+                        color:$blue;
+                    }
+                }
+            }
+        }
+        .navbar-submenu{
+            li{
+                a{
+                    color:$blue;
                 }
             }
         }
     }
+
+    .navbar{
+        background:none;
+        .nav{
+            >li{
+                a{
+                    color:$white;
+                }
+            }
+        }
+        .collapse.navbar-collapse{
+            border:none;
+            box-shadow:none;
+        }
+    }
+    .navbar-primary{
+        background:none;
+        border:none;
+        margin-bottom: 0;
+
+        .navbar-brand{
+            // padding:40px 15px;
+            margin-left:0;
+        }
+        .nav{
+            > li{
+                margin-right:5px;
+
+                a{
+                    color:$white;
+                    font-size:14px;
+                    background-color: lighten($blue, 20%);
+                    border-radius:0 0 5px 5px;
+                    padding:10px 17px;
+                    &:hover{
+                        color:$white;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-submenu{
+        border:none;
+        margin-bottom: 0;
+        border-radius:0;
+    }
+
 }

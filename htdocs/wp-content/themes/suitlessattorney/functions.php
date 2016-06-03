@@ -45,6 +45,7 @@ function suitlessattorney_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'suitlessattorney' ),
+		'actionnav' => esc_html__( 'Action Links', 'suitlessattorney' ),
 	) );
 
 	/*
@@ -116,12 +117,13 @@ add_action( 'widgets_init', 'suitlessattorney_widgets_init' );
 function suitlessattorney_scripts() {
 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css' );
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css' );
 	wp_enqueue_style( 'base-style', get_template_directory_uri() . '/css/sa-base.css' );
 	// wp_enqueue_script( 'suitlessattorney-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	// wp_enqueue_script( 'suitlessattorney-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	// wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', array(), 'v1.12.4', true );
-	wp_enqueue_script( 'fontawesome', 'https://use.fontawesome.com/e1139cdb59.js', array(), 'v1.12.4', true );
+	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/js/jquery.sticky.js', array(), true );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), 'v3.3.6', true );
 	wp_enqueue_script( 'base-app', get_template_directory_uri() . '/js/app.js', array('jquery'), 'v1.0', true );
 

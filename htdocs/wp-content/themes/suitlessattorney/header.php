@@ -31,10 +31,9 @@
 
 	<body <?php body_class(); ?>>
 
-	<section>
-		<?php get_template_part('nav'); ?>
-	</section>
-	
+
+	<?php get_template_part('nav'); ?>
+
 	<?php if ( is_front_page() ): ?>
 		<?php //get_template_part('template-parts/content','home-slider') ?>
 	<?php endif; ?>

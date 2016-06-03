@@ -1,16 +1,16 @@
 @import '_fonts';
 @import '_palette';
 @import '_mixins';
+@import '_ui';
 @import '_nav';
 
 body{
-
+    font-size:16px;
 }
 #intro{
+    padding-top:100px;
     background:url(../img/img-intro.jpg);
     @include img-cover();
-    // height:678px;
-    // padding-top:40px;
     h1{
         margin-top:0;
         font-family: 'andadaregular', serif;
@@ -29,17 +29,67 @@ body{
         )
     }
 }
-#howitworks{
-    padding:30px 0;
-    text-align:center;
+#whatwedo,
+#howitworks,
+#testimonial
+{
+    padding:70px 0;
     h1{
         display:inline-block;
         font-family: 'andadaregular', serif;
         text-align:center;
         font-size:24px;
-        border-bottom:1px solid $blue;
+        border-bottom:8px solid lighten($blue, 60%);
         color:$blue;
+        margin:0 0 0px 0;
+        padding:0 0 30px 0;
+    }
+    .page-title{
+
+        border-bottom:1px solid lighten($blue, 60%);
         margin-bottom:50px;
+        text-align:center;
+    }
+}
+#whatwedo{
+    background-color: $blue;
+    background: linear-gradient(
+      rgba($blue, 0.90),
+      rgba($blue, 0.90)
+    ),url(../img/img-bg.png);
+    h1{
+        color:lighten($blue, 60%);
+    }
+    .item-container{
+        padding:0 20px;
+        margin-top:40px;
+
+        .whatwedo-item{
+            font-size:16px;
+            margin-bottom:10px;
+            margin-left:20px;
+            &:before{
+                font-family: FontAwesome;
+                content: "\f00c";
+                position:absolute;
+                margin-left:-30px;
+                color:lighten($blue, 60%);
+            }
+        }
+
+    }
+
+    color:$white;
+}
+#howitworks{
+
+    text-align:center;
+    .hiw-icons{
+        &:last-child{
+            .lead{
+                display:none;
+            }
+        }
     }
     .item-container{
         margin-bottom:30px;
@@ -49,10 +99,14 @@ body{
             margin-top:10px;
             display:block;
         }
+
         .hiw-icon{
+            img{
+                margin-top:0px;
+            }
             position:relative;
-            width: 78px;
-            height: 78px;
+            width: 85px;
+            height: 85px;
             margin:0 auto;
             display: block;
             background-color: $blue;
@@ -61,8 +115,8 @@ body{
             font-size:30px;
             line-height:78px;
             .number{
-                height: 40px;
-                width: 40px;
+                height: 35px;
+                width: 35px;
                 display:block;
                 position:absolute;
                 background-color: lighten($blue, 30%);
@@ -70,10 +124,49 @@ body{
                 border-radius:100%;
                 top:-8px;
                 left:-8px;
-                line-height:37px;
+                line-height:32px;
                 font-size:16px;
             }
+            .lead{
+                position:absolute;
+                right:-95px;
+                top:35px;
+                width:90px;
+                height:19px;
+                background:url(../img/img-dots.png) center center repeat-x;
+            }
+
         }
+
+    }
+
+}
+#schedule{
+    background-color: $blue;
+    text-align:center;
+    padding:30px 0;
+    .btn{
+        font-size:18px;
+        border-radius:3px;
+        color:$blue;
+        padding:12px 15px;
+        font-family: 'andadaregular', serif;
+    }
+}
+#testimonial{
+    text-align:center;
+    background-color:$grey;
+    padding:40px 0 40px 0;
+
+    h1{
+
+        border-bottom:8px solid darken($grey, 60%);
+        color:darken($grey, 60%);
+    }
+    .page-title{
+
+        border-bottom:1px solid darken($grey, 60%);
+        margin-bottom:20px;
     }
 
 }

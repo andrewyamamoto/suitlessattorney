@@ -1,1 +1,1 @@
-$(document).ready(function(){});
+$(document).ready(function(){$(window).scroll(function(){$(this).scrollTop()>1?$("#navigation").addClass("sticky"):$("#navigation").removeClass("sticky")}),$(".carousel").carousel({interval:7e3})});
