@@ -40,41 +40,18 @@
 
 #navigation {
   transition: background-color, .2s; }
-  #navigation.sticky {
-    background-color: rgba(255, 255, 255, 0.9); }
-    #navigation.sticky .nav > li a {
-      color: #153c79; }
-      #navigation.sticky .nav > li a:focus, #navigation.sticky .nav > li a:hover {
-        color: #153c79; }
-    #navigation.sticky .navbar-submenu li a {
-      color: #153c79; }
   #navigation .navbar {
-    background: none; }
-    #navigation .navbar .nav > li a {
-      color: #FFF; }
-    #navigation .navbar .collapse.navbar-collapse {
-      border: none;
-      box-shadow: none; }
-  #navigation .navbar-primary {
     background: none;
-    border: none;
-    margin-bottom: 0; }
-    #navigation .navbar-primary .navbar-brand {
-      margin-left: 0; }
-    #navigation .navbar-primary .nav > li {
-      margin-right: 5px; }
-      #navigation .navbar-primary .nav > li a {
-        color: #FFF;
-        font-size: 14px;
-        background-color: #2467d0;
-        border-radius: 0 0 5px 5px;
-        padding: 10px 17px; }
-        #navigation .navbar-primary .nav > li a:hover {
-          color: #FFF; }
-  #navigation .navbar-submenu {
-    border: none;
-    margin-bottom: 0;
+    border: 0;
     border-radius: 0; }
+    #navigation .navbar li a {
+      color: #FFF;
+      padding: 30px 15px; }
+    #navigation .navbar .navbar-brand {
+      padding: 30px 20px;
+      color: #FFF; }
+  #navigation.sticky .navbar {
+    background: linear-gradient(rgba(6, 17, 34, 0.7), rgba(6, 17, 34, 0.7)); }
 
 body {
   font-size: 16px; }
@@ -86,6 +63,13 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  #intro.interior {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/img-purchase.jpg); }
+    #intro.interior h1 {
+      justify-content: center;
+      flex-direction: column;
+      display: flex;
+      height: 200px; }
   #intro h1 {
     margin-top: 0;
     font-family: 'andadaregular', serif;
@@ -211,3 +195,42 @@ body {
   #testimonial .page-title {
     border-bottom: 1px solid #545454;
     margin-bottom: 20px; }
+
+#schedule-consult {
+  padding: 70px 0; }
+  #schedule-consult #bookinginstructions {
+    background-color: #ededed;
+    padding: 20px;
+    margin-bottom: 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #CCC; }
+
+#footer {
+  padding: 70px 0;
+  color: #808393;
+  background-color: #1e202a; }
+  #footer .footer-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #808393;
+    margin-bottom: 10px; }
+    #footer .footer-title .title {
+      display: inline-block;
+      border-bottom: 4px solid #808393;
+      padding-bottom: 10px; }
+  #footer .copy {
+    border-top: 1px solid #808393;
+    margin-top: 15px;
+    padding-top: 15px;
+    font-size: 14px; }
+  #footer #footer-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+    #footer #footer-menu li {
+      margin-bottom: 10px; }
+      #footer #footer-menu li a {
+        color: #808393; }

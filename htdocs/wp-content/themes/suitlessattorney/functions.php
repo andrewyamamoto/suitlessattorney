@@ -46,6 +46,7 @@ function suitlessattorney_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'suitlessattorney' ),
 		'actionnav' => esc_html__( 'Action Links', 'suitlessattorney' ),
+		'footer' => esc_html__( 'Footer', 'suitlessattorney' )
 	) );
 
 	/*
@@ -122,16 +123,24 @@ function suitlessattorney_scripts() {
 	// wp_enqueue_script( 'suitlessattorney-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	// wp_enqueue_script( 'suitlessattorney-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	// wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', array(), 'v1.12.4', true );
+
+	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', array(), true );
 	wp_enqueue_script( 'sticky', get_template_directory_uri() . '/js/jquery.sticky.js', array(), true );
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), 'v3.3.6', true );
-	wp_enqueue_script( 'base-app', get_template_directory_uri() . '/js/app.js', array('jquery'), 'v1.0', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), 'v3.3.6', true );
+	wp_enqueue_script( 'base-app', get_template_directory_uri() . '/js/app.js', array(), 'v1.0', true );
+
 
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+}
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', false, null);
+   wp_enqueue_script('jquery');
 }
 add_action( 'wp_enqueue_scripts', 'suitlessattorney_scripts' );
 

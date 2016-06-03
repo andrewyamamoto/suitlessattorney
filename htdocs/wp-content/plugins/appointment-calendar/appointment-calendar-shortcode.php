@@ -536,7 +536,6 @@ function appointment_calendar_shortcode() {
 
     <!---Show appointment calendar--->
     <div id='calendar'>
-        <div align="right">Appointment Calendar Powered By: <a href="http://appointzilla.com/" title="Appointment Scheduling plugin for Wordpress" target="_blank">AppointZilla</a></div>
         <!---AppSecondModal For Schedule New Appointment--->
         <div id="AppSecondModalDiv" style="display:none;"></div>
     </div>

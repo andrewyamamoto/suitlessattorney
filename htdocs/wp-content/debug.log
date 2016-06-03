@@ -105,3 +105,56 @@
 [03-Jun-2016 18:43:33 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/template-parts/content-testimonial.php on line 98
 [03-Jun-2016 18:44:10 UTC] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/template-parts/content-testimonial.php on line 99
 [03-Jun-2016 18:44:27 UTC] PHP Notice:  Undefined variable: section in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/template-parts/content-testimonial.php on line 73
+[03-Jun-2016 22:25:36 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /srv/www/suitlessattorney/htdocs/wp-content/plugins/appointment-calendar/menu-pages/manage-appointments.php on line 26
+[03-Jun-2016 22:30:47 UTC] PHP Notice:  get_settings is <strong>deprecated</strong> since version 2.1! Use get_option() instead. in /srv/www/suitlessattorney/htdocs/wp-includes/functions.php on line 3658
+[03-Jun-2016 22:30:47 UTC] WordPress database error Table 'wp_ap_appointments' already exists for query CREATE TABLE `wp_ap_appointments` (
+`id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`name` VARCHAR( 30 ) NOT NULL ,
+`email` VARCHAR( 256 ) NOT NULL ,
+`service_id` INT( 11 ) NOT NULL ,
+`phone` BIGINT( 21 ) NOT NULL ,
+`start_time` VARCHAR( 10 ) NOT NULL ,
+`end_time` VARCHAR( 10 ) NOT NULL ,
+`date` DATE NOT NULL ,
+`note` TEXT NOT NULL ,
+`appointment_key` VARCHAR( 32 ) NOT NULL ,
+`status` VARCHAR( 10 ) NOT NULL ,
+`appointment_by` VARCHAR( 10 ) NOT NULL
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci; made by activate_plugin, do_action('activate_appointment-calendar/appointment-calendar.php'), call_user_func_array, InstallScript, require_once('/plugins/appointment-calendar/install-script.php')
+[03-Jun-2016 22:30:47 UTC] WordPress database error Table 'wp_ap_events' already exists for query CREATE TABLE `wp_ap_events` (
+`id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`name` VARCHAR( 30 ) NOT NULL ,
+`allday` VARCHAR( 10 ) NOT NULL ,
+`start_time` VARCHAR( 10 ) NOT NULL ,
+`end_time` VARCHAR( 10 ) NOT NULL ,
+`repeat` VARCHAR( 10 ) NOT NULL ,
+`start_date` DATE NOT NULL ,
+`end_date` DATE NOT NULL ,
+`note` TEXT NOT NULL ,
+`status` VARCHAR( 10 ) NOT NULL
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci; made by activate_plugin, do_action('activate_appointment-calendar/appointment-calendar.php'), call_user_func_array, InstallScript, require_once('/plugins/appointment-calendar/install-script.php')
+[03-Jun-2016 22:30:47 UTC] WordPress database error Table 'wp_ap_services' already exists for query CREATE TABLE `wp_ap_services` (
+`id` INT( 11 ) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+`name` VARCHAR( 50 ) NOT NULL ,
+`desc` TEXT NOT NULL ,
+`duration` INT( 11 ) NOT NULL ,
+`unit` VARCHAR( 10 ) NOT NULL ,
+`paddingtime` INT( 11 ) NOT NULL ,
+`cost` FLOAT NOT NULL ,
+`capacity` INT( 11 ) NOT NULL ,
+`availability` VARCHAR( 10 ) NOT NULL ,
+`business_id` INT( 11 ) NOT NULL ,
+`category_id` INT( 11 ) NOT NULL ,
+`staff_id` VARCHAR( 300 ) NOT NULL
+)DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci; made by activate_plugin, do_action('activate_appointment-calendar/appointment-calendar.php'), call_user_func_array, InstallScript, require_once('/plugins/appointment-calendar/install-script.php')
+[03-Jun-2016 22:30:47 UTC] WordPress database error Duplicate entry '1' for key 'PRIMARY' for query INSERT INTO `wp_ap_services` ( `id` , `name` , `desc` , `duration` , `unit` , `paddingtime`, `cost` , `capacity`, `availability`, `business_id`, `category_id`, `staff_id` ) VALUES ('1', 'Default', 'This is default service. You can edit this service.', '30', 'minute', '10', '100', '10', 'yes', '1', '1', '1'); made by activate_plugin, do_action('activate_appointment-calendar/appointment-calendar.php'), call_user_func_array, InstallScript, require_once('/plugins/appointment-calendar/install-script.php')
+[03-Jun-2016 22:30:47 UTC] WordPress database error Table 'wp_ap_service_category' already exists for query CREATE TABLE `wp_ap_service_category` ( `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY , `name` VARCHAR( 100 ) NOT NULL )DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci; made by activate_plugin, do_action('activate_appointment-calendar/appointment-calendar.php'), call_user_func_array, InstallScript, require_once('/plugins/appointment-calendar/install-script.php')
+[03-Jun-2016 22:30:47 UTC] WordPress database error Duplicate entry '1' for key 'PRIMARY' for query INSERT INTO `wp_ap_service_category` ( `id` , `name` ) VALUES ( '1', 'Default' ); made by activate_plugin, do_action('activate_appointment-calendar/appointment-calendar.php'), call_user_func_array, InstallScript, require_once('/plugins/appointment-calendar/install-script.php')
+[03-Jun-2016 22:55:05 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /srv/www/suitlessattorney/htdocs/wp-content/plugins/appointment-calendar/menu-pages/manage-appointments.php on line 26
+[03-Jun-2016 22:55:33 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /srv/www/suitlessattorney/htdocs/wp-content/plugins/appointment-calendar/menu-pages/manage-appointments.php on line 26
+[03-Jun-2016 22:55:35 UTC] PHP Deprecated:  mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead in /srv/www/suitlessattorney/htdocs/wp-content/plugins/appointment-calendar/menu-pages/manage-appointments.php on line 26
+[03-Jun-2016 22:55:47 UTC] PHP Notice:  Undefined variable: current in /srv/www/suitlessattorney/htdocs/wp-content/plugins/custom-post-type-ui/inc/post-types.php on line 192
+[03-Jun-2016 22:55:54 UTC] PHP Notice:  Undefined variable: current in /srv/www/suitlessattorney/htdocs/wp-content/plugins/custom-post-type-ui/inc/post-types.php on line 192
+[03-Jun-2016 23:58:15 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/functions.php on line 50
+[03-Jun-2016 23:58:18 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/functions.php on line 50
+[03-Jun-2016 23:58:20 UTC] PHP Parse error:  syntax error, unexpected ')', expecting identifier (T_STRING) in /srv/www/suitlessattorney/htdocs/wp-content/themes/suitlessattorney/functions.php on line 50

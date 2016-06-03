@@ -69,5 +69,5 @@
 
 </section>
 <section id="schedule">
-    <a href="disney.com" class='btn btn-warning'>Schedule a free consultation</a>
+    <a href="/schedule-consultation/" class='btn btn-warning'>Schedule a free consultation</a>
 </section>

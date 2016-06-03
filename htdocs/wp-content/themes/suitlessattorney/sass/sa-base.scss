@@ -8,6 +8,20 @@ body{
     font-size:16px;
 }
 #intro{
+
+    &.interior{
+
+        h1{
+            @include vert-align-inline(200px);
+        }
+        background:
+        linear-gradient(
+            rgba($black, 0.70),
+            rgba($black, 0.70)
+        ),
+        url(../img/img-purchase.jpg);
+
+    }
     padding-top:100px;
     background:url(../img/img-intro.jpg);
     @include img-cover();
@@ -169,4 +183,48 @@ body{
         margin-bottom:20px;
     }
 
+}
+#schedule-consult{
+    padding:70px 0;
+    // margin-top:100px;
+    #bookinginstructions{
+        background-color:$grey;
+        padding:20px;
+        margin-bottom:20px;
+        @include border-radius(3px);
+        border:1px solid #CCC;
+    }
+}
+#footer{
+    padding:70px 0;
+    color:$grey-medium;
+    background-color:$blue-dark;
+    .footer-title{
+        font-weight:bold;
+        margin-bottom:15px;
+        border-bottom:1px solid $grey-medium;
+        margin-bottom:10px;
+        .title{
+            display: inline-block;
+            border-bottom:4px solid $grey-medium;
+            padding-bottom:10px;
+        }
+    }
+    .copy{
+        border-top:1px solid $grey-medium;
+        margin-top:15px;
+        padding-top:15px;
+        font-size:14px;
+    }
+    #footer-menu{
+        margin:0;
+        padding:0;
+        list-style: none;
+        li{
+            margin-bottom:10px;
+            a{
+                color:$grey-medium;
+            }
+        }
+    }
 }
