@@ -19,8 +19,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-get_header( 'shop' ); ?>
+get_header(); ?>
+<section id="intro" class='interior'>
 
+	<article>
+		<div class="container">
+			<div class="row">
+				<h1>
+					Purchase Legal Services
+				</h1>
+			</div>
+		</div>
+	</article>
+
+</section>
 	<?php
 		/**
 		 * woocommerce_before_main_content hook.
@@ -30,12 +42,6 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-
-		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-
-			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-
-		<?php endif; ?>
 
 		<?php
 			/**

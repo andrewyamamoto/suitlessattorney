@@ -137,27 +137,24 @@ function suitlessattorney_scripts() {
 	}
 }
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
-function my_jquery_enqueue() {
-   wp_deregister_script('jquery');
-   wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', false, null);
-   wp_enqueue_script('jquery');
-}
-add_action( 'wp_enqueue_scripts', 'suitlessattorney_scripts' );
+	function my_jquery_enqueue() {
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', get_template_directory_uri() . '/js/jquery-1.12.4.min.js', false, null);
+		wp_enqueue_script('jquery');
+	}
 
-remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
-remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
-remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
-remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+	add_action( 'wp_enqueue_scripts', 'suitlessattorney_scripts' );
 
-function woocommerce_result_count() {
+	remove_action( 'woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10 );
+	remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
+	remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+	remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+	function woocommerce_result_count() {
         return;
-}
-// add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_single_excerpt' );
-// add_filter( 'woocommerce_cart_item_thumbnail', '__return_empty_string' );
-// remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
+	}
 
-add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
-
+	add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
 /**
  * custom_woocommerce_template_loop_add_to_cart
 */

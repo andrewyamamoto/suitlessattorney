@@ -16,7 +16,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Suitless Attorney</a>
+          <a class="navbar-brand" href="/">Suitless Attorney</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -31,7 +31,7 @@
             ) );
 
             ?>
-            
+
       </div><!-- /.container-fluid -->
     </nav>
 

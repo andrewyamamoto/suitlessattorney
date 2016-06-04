@@ -36,32 +36,89 @@
         </div>
 
         <div class="row item-container">
-            <?php
-				// check if the repeater field has rows of data
-				if( have_rows('whatwedo_bullets') ):
-					$count = 0;
 
-					// loop through the rows of data
-					while ( have_rows('whatwedo_bullets') ) : the_row();
-                        $bullet = get_sub_field('item');
 
-			?>
+            <?php if( have_rows('whatwedo_bullets') ): ?>
+
+                <div class='col-lg-4 col-md-6 col-sm-6'>
+                    <?php
+				    while ( have_rows('whatwedo_bullets') ) : the_row();
+                    $col1 = get_sub_field('col1');
+			        ?>
+
+                    <?php if($col1 != ''): ?>
+                        <div class='whatwedo-item'>
+
+                            <?php
+                                echo "$col1";
+                            ?>
+
+                        </div>
+                    <?php endif; ?>
+
+					<?php endwhile; ?>
+                    </div>
+                    <?php
+
+			    ?>
+                <?php
+                    else:
+                    endif;
+                ?>
+
+                <?php if( have_rows('whatwedo_bullets') ): ?>
+
+                    <div class='col-lg-4 col-md-6 col-sm-6'>
+                        <?php
+    				    while ( have_rows('whatwedo_bullets') ) : the_row();
+                        $col2 = get_sub_field('col2');
+    			        ?>
+                        <?php if($col2 != ''): ?>
+                            <div class='whatwedo-item'>
+
+                                <?php
+                                    echo "$col2";
+                                ?>
+
+                            </div>
+                        <?php endif; ?>
+
+    					<?php endwhile; ?>
+                        </div>
+                        <?php
+
+    			    ?>
+                    <?php
+                        else:
+                        endif;
+                    ?>
+                    <?php if( have_rows('whatwedo_bullets') ): ?>
 
                         <div class='col-lg-4 col-md-6 col-sm-6'>
-                            <div class='whatwedo-item'>
-							    <?php echo "$bullet"; ?>
+                            <?php
+        				    while ( have_rows('whatwedo_bullets') ) : the_row();
+                            $col3 = get_sub_field('col3');
+        			        ?>
+
+                            <?php if($col3 != ''): ?>
+                                <div class='whatwedo-item'>
+
+                                    <?php
+                                        echo "$col3";
+                                    ?>
+
+                                </div>
+                            <?php endif; ?>
+
+        					<?php endwhile; ?>
                             </div>
-                        </div>
+                            <?php
 
-					<?php
-                    endwhile;
-
-					else:
-
-						// no rows found
-
-					endif;
-			?>
+        			    ?>
+                        <?php
+                            else:
+                            endif;
+                        ?>
 
         </div>
 
